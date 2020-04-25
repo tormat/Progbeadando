@@ -1,0 +1,14 @@
+def harshad(n):  #20. feladat
+    o= 0
+    while n>0:
+        o+= n% 10
+        n//=10
+    return o
+def oszthato(n, o):
+    if n%o==0:
+        return "Ez egy Harshad szám!"
+    else:
+        return "Ez NEM harshad szám!"
+n=int(input("Adjon meg egy számot: "))
+print(harshad(n))
+print(oszthato(n,harshad(n)))
